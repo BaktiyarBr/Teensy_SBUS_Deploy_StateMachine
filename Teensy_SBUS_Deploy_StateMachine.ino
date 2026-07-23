@@ -152,17 +152,19 @@ const bool CAMERA_TILT_INVERT   = false;
 // -------------------- Petal servo calibration --------------------
 // Petals are configured for approximately 180 degrees of motion.
 // The right petal is mechanically mirrored here, so its open pulse moves downward.
-const int PETAL_LEFT_MIN_US    = 1000;
-const int PETAL_LEFT_MAX_US    = 2000;
-const int PETAL_LEFT_CLOSED_US = 1000;
-const int PETAL_LEFT_OPEN_US   = PETAL_LEFT_CLOSED_US + PETAL_TRAVEL_US;
-const bool PETAL_LEFT_INVERT   = false;
+const int PETAL_LEFT_MIN_US    = 500;
+const int PETAL_LEFT_MAX_US    = 2500;
+const int PETAL_LEFT_CLOSED_US = 600;
+// const int PETAL_LEFT_OPEN_US   = PETAL_LEFT_CLOSED_US + PETAL_TRAVEL_US;
+const int PETAL_LEFT_OPEN_US   = 2310; // hardcoded value instead of pos+trvel_us
+const bool PETAL_LEFT_INVERT   = true;
 
-const int PETAL_RIGHT_MIN_US    = 1000;
-const int PETAL_RIGHT_MAX_US    = 2000;
-const int PETAL_RIGHT_CLOSED_US = 2000;
-const int PETAL_RIGHT_OPEN_US   = PETAL_RIGHT_CLOSED_US - PETAL_TRAVEL_US;
-const bool PETAL_RIGHT_INVERT   = false;
+const int PETAL_RIGHT_MIN_US    = 500;
+const int PETAL_RIGHT_MAX_US    = 2500;
+const int PETAL_RIGHT_CLOSED_US = 2310; // tuned values 
+// const int PETAL_RIGHT_OPEN_US   = PETAL_RIGHT_CLOSED_US - PETAL_TRAVEL_US;
+const int PETAL_RIGHT_OPEN_US   = 600;// hardcoded value instead of pos+trvel_us
+const bool PETAL_RIGHT_INVERT   = true;
 
 // -------------------- Radar antenna servo calibration --------------------
 // Radar antennas are configured for approximately 90 degrees of motion.
